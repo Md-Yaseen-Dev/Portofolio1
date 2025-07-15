@@ -56,12 +56,6 @@ export default function SkillsSection() {
             >
               <motion.div 
                 className="skill-card rounded-xl p-6 text-center relative group"
-                initial={{ 
-                  scale: 1,
-                  rotateY: 0,
-                  rotateX: 0,
-                  zIndex: 1
-                }}
                 whileHover={{ 
                   scale: 1.1,
                   rotateY: 10,
@@ -72,8 +66,7 @@ export default function SkillsSection() {
                 transition={{ 
                   type: "spring", 
                   stiffness: 300,
-                  damping: 20,
-                  duration: 0.3
+                  damping: 20
                 }}
                 style={{ 
                   transformStyle: "preserve-3d",
@@ -82,23 +75,17 @@ export default function SkillsSection() {
               >
                 {/* Hover Glow Effect */}
                 <motion.div
-                  className="absolute inset-0 gradient-bg rounded-xl"
-                  initial={{ opacity: 0, scale: 1 }}
-                  whileHover={{ opacity: 0.2, scale: 1.1 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="absolute inset-0 gradient-bg rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  whileHover={{ scale: 1.1 }}
                 />
                 
                 <motion.div 
                   className={`w-16 h-16 mx-auto mb-4 ${skill.color} rounded-lg flex items-center justify-center relative z-10 shadow-lg`}
-                  initial={{ 
-                    rotateY: 0,
-                    scale: 1
-                  }}
                   whileHover={{ 
                     rotateY: 180,
                     scale: 1.1
                   }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  transition={{ duration: 0.6 }}
                 >
                   <span className={`text-2xl font-bold ${skill.color.includes('yellow') ? 'text-black' : 'text-white'}`}>
                     {skill.icon}
@@ -107,63 +94,40 @@ export default function SkillsSection() {
                 
                 <motion.p 
                   className="font-semibold relative z-10 text-sm"
-                  initial={{ opacity: 0.8, scale: 1 }}
+                  initial={{ opacity: 0.8 }}
                   whileHover={{ opacity: 1, scale: 1.05 }}
-                  transition={{ duration: 0.2, ease: "easeInOut" }}
                 >
                   {skill.name}
                 </motion.p>
                 
                 {/* Animated Border */}
                 <motion.div
-                  className="absolute inset-0 rounded-xl border-2"
-                  initial={{ 
-                    borderColor: "transparent",
-                    boxShadow: "0 0 0px transparent"
-                  }}
+                  className="absolute inset-0 rounded-xl border-2 border-transparent"
                   whileHover={{
                     borderColor: "rgba(168, 85, 247, 0.5)",
                     boxShadow: "0 0 20px rgba(168, 85, 247, 0.3)"
                   }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.3 }}
                 />
                 
                 {/* Particle Effects */}
                 <motion.div
-                  className="absolute top-2 right-2 w-2 h-2 gradient-bg rounded-full"
-                  initial={{ 
-                    opacity: 0,
-                    scale: 1,
-                    rotate: 0
-                  }}
+                  className="absolute top-2 right-2 w-2 h-2 gradient-bg rounded-full opacity-0"
                   whileHover={{ 
                     opacity: 1,
                     scale: [1, 1.5, 1],
                     rotate: 360
                   }}
-                  transition={{ 
-                    opacity: { duration: 0.3, ease: "easeInOut" },
-                    scale: { duration: 1, repeat: Infinity },
-                    rotate: { duration: 1, repeat: Infinity }
-                  }}
+                  transition={{ duration: 1, repeat: Infinity }}
                 />
                 <motion.div
-                  className="absolute bottom-2 left-2 w-1.5 h-1.5 gradient-bg rounded-full"
-                  initial={{ 
-                    opacity: 0,
-                    scale: 1,
-                    rotate: 0
-                  }}
+                  className="absolute bottom-2 left-2 w-1.5 h-1.5 gradient-bg rounded-full opacity-0"
                   whileHover={{ 
                     opacity: 1,
                     scale: [1, 1.3, 1],
                     rotate: -360
                   }}
-                  transition={{ 
-                    opacity: { duration: 0.3, ease: "easeInOut" },
-                    scale: { duration: 1.5, repeat: Infinity },
-                    rotate: { duration: 1.5, repeat: Infinity }
-                  }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
                 />
               </motion.div>
             </EnhancedScrollAnimation>
