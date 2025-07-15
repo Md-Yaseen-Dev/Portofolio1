@@ -3,64 +3,66 @@
 @tailwind utilities;
 
 :root {
-  /* Nature-inspired color palette */
-  --background: hsl(52, 29%, 97%); /* Ivory Cream #FAF8F1 */
-  --foreground: hsl(109, 8%, 18%); /* Deep Olive #2E3D30 */
-  --muted: hsl(52, 12%, 90%); /* Light warm neutral */
-  --muted-foreground: hsl(109, 4%, 45%); /* Muted olive */
-  --popover: hsl(52, 29%, 97%);
-  --popover-foreground: hsl(109, 8%, 18%);
-  --card: hsl(52, 25%, 95%); /* Slightly warmer card background */
-  --card-foreground: hsl(109, 8%, 18%);
-  --border: hsl(44, 9%, 81%); /* Soft Taupe #CFCFC4 */
-  --input: hsl(44, 9%, 81%);
+  /* Dark nature-inspired color palette */
+  --background: hsl(137, 18%, 15%); /* Deep Forest Green #1E2B26 */
+  --foreground: hsl(52, 29%, 97%); /* Ivory White #FAF8F1 */
+  --muted: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
+  --muted-foreground: hsl(120, 15%, 80%); /* Pale Sage #C6D2C1 */
+  --popover: hsl(137, 18%, 15%);
+  --popover-foreground: hsl(52, 29%, 97%);
+  --card: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
+  --card-foreground: hsl(52, 29%, 97%);
+  --border: hsl(120, 12%, 52%); /* Olive Gray #7C8F84 */
+  --input: hsl(120, 12%, 52%);
   --primary: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
-  --primary-foreground: hsl(52, 29%, 97%);
-  --secondary: hsl(52, 25%, 95%);
-  --secondary-foreground: hsl(109, 8%, 18%);
+  --primary-foreground: hsl(137, 18%, 15%);
+  --secondary: hsl(137, 12%, 20%);
+  --secondary-foreground: hsl(52, 29%, 97%);
   --accent: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
-  --accent-foreground: hsl(52, 29%, 97%);
+  --accent-foreground: hsl(137, 18%, 15%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(52, 29%, 97%);
   --ring: hsl(120, 23%, 70%);
   --radius: 0.75rem;
   
-  /* Nature-inspired gradients */
+  /* Dark nature-inspired gradients */
   --gradient-1: hsl(120, 23%, 70%); /* Sage Green */
   --gradient-2: hsl(120, 20%, 45%); /* Forest Green */
-  --gradient-3: hsl(52, 29%, 97%); /* Ivory Cream */
-  --gradient-4: hsl(44, 9%, 81%); /* Soft Taupe */
-  --gradient-5: hsl(109, 8%, 18%); /* Deep Olive */
+  --gradient-3: hsl(137, 18%, 15%); /* Deep Forest Green */
+  --gradient-4: hsl(120, 12%, 52%); /* Olive Gray */
+  --gradient-5: hsl(52, 29%, 97%); /* Ivory White */
   
-  /* Custom nature colors */
+  /* Custom dark nature colors */
   --sage-green: hsl(120, 23%, 70%); /* #9DBF9E */
   --forest-green: hsl(120, 20%, 45%); /* #4B715D */
-  --deep-olive: hsl(109, 8%, 18%); /* #2E3D30 */
-  --ivory-cream: hsl(52, 29%, 97%); /* #FAF8F1 */
-  --soft-taupe: hsl(44, 9%, 81%); /* #CFCFC4 */
+  --deep-forest: hsl(137, 18%, 15%); /* #1E2B26 */
+  --ivory-white: hsl(52, 29%, 97%); /* #FAF8F1 */
+  --olive-gray: hsl(120, 12%, 52%); /* #7C8F84 */
+  --charcoal-green: hsl(137, 12%, 20%); /* #26332D */
+  --pale-sage: hsl(120, 15%, 80%); /* #C6D2C1 */
 }
 
 .dark {
-  /* Keep nature theme even in dark mode with darker variants */
-  --background: hsl(109, 15%, 12%); /* Dark olive background */
-  --foreground: hsl(52, 29%, 95%); /* Light cream text */
-  --muted: hsl(109, 10%, 20%);
-  --muted-foreground: hsl(52, 15%, 70%);
-  --popover: hsl(109, 15%, 12%);
-  --popover-foreground: hsl(52, 29%, 95%);
-  --card: hsl(109, 12%, 15%);
-  --card-foreground: hsl(52, 29%, 95%);
-  --border: hsl(109, 8%, 25%);
-  --input: hsl(109, 8%, 25%);
-  --primary: hsl(120, 23%, 60%); /* Slightly darker sage */
-  --primary-foreground: hsl(109, 15%, 12%);
-  --secondary: hsl(109, 12%, 15%);
-  --secondary-foreground: hsl(52, 29%, 95%);
-  --accent: hsl(120, 23%, 60%);
-  --accent-foreground: hsl(109, 15%, 12%);
+  /* Inherit the same dark nature theme - no changes needed */
+  --background: hsl(137, 18%, 15%); /* Deep Forest Green #1E2B26 */
+  --foreground: hsl(52, 29%, 97%); /* Ivory White #FAF8F1 */
+  --muted: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
+  --muted-foreground: hsl(120, 15%, 80%); /* Pale Sage #C6D2C1 */
+  --popover: hsl(137, 18%, 15%);
+  --popover-foreground: hsl(52, 29%, 97%);
+  --card: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
+  --card-foreground: hsl(52, 29%, 97%);
+  --border: hsl(120, 12%, 52%); /* Olive Gray #7C8F84 */
+  --input: hsl(120, 12%, 52%);
+  --primary: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
+  --primary-foreground: hsl(137, 18%, 15%);
+  --secondary: hsl(137, 12%, 20%);
+  --secondary-foreground: hsl(52, 29%, 97%);
+  --accent: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
+  --accent-foreground: hsl(137, 18%, 15%);
   --destructive: hsl(0, 62%, 50%);
-  --destructive-foreground: hsl(52, 29%, 95%);
-  --ring: hsl(120, 23%, 60%);
+  --destructive-foreground: hsl(52, 29%, 97%);
+  --ring: hsl(120, 23%, 70%);
   --radius: 0.75rem;
 }
 
@@ -185,13 +187,13 @@
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 50%, var(--deep-olive) 100%);
+    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 50%, var(--charcoal-green) 100%);
     background-size: 300% 300%;
     animation: gentleShift 12s ease infinite;
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 100%);
+    background: linear-gradient(135deg, var(--sage-green) 0%, var(--primary) 100%);
     background-size: 200% 200%;
     animation: gentleShift 8s ease infinite;
     -webkit-background-clip: text;
@@ -212,8 +214,8 @@
   
   .blur-effect {
     backdrop-filter: blur(12px) saturate(180%);
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--card);
+    border: 1px solid var(--border);
   }
   
   /* Enhanced navbar backdrop */
@@ -259,10 +261,11 @@
   
   .skill-card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: var(--card);
+    border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
+    border-radius: 0.75rem;
   }
   
   .skill-card::before {
@@ -272,7 +275,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -282,17 +285,18 @@
   }
   
   .skill-card:hover {
-    transform: translateY(-8px) rotateX(5deg);
-    box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.4);
-    border-color: var(--gradient-1);
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow: 0 25px 50px -12px rgba(157, 191, 158, 0.3);
+    border-color: var(--primary);
   }
   
   .project-card {
-    background: linear-gradient(135deg, hsl(217, 32%, 17%) 0%, hsl(218, 47%, 7%) 100%);
-    border: 1px solid hsl(217, 32%, 27%);
+    background: var(--card);
+    border: 1px solid var(--border);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    border-radius: 0.75rem;
   }
   
   .project-card::before {
@@ -302,19 +306,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
     opacity: 0;
     transition: opacity 0.3s ease;
   }
   
   .project-card:hover::before {
-    opacity: 0.05;
+    opacity: 0.08;
   }
   
   .project-card:hover {
-    border-color: var(--gradient-1);
-    box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.3);
-    transform: translateY(-5px) scale(1.02);
+    border-color: var(--primary);
+    box-shadow: 0 25px 50px -12px rgba(157, 191, 158, 0.2);
+    transform: translateY(-5px) scale(1.01);
   }
   
   .timeline-item {
@@ -364,10 +368,10 @@
   }
   
   .parallax-bg {
-    background: radial-gradient(circle at 20% 50%, var(--sage-green) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--forest-green) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, var(--primary) 0%, transparent 50%);
-    opacity: 0.1;
+    background: radial-gradient(circle at 20% 50%, var(--sage-green) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, var(--forest-green) 0%, transparent 40%),
+                radial-gradient(circle at 40% 80%, var(--primary) 0%, transparent 40%);
+    opacity: 0.15;
     animation: parallaxMove 20s ease-in-out infinite;
   }
 

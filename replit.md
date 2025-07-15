@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern, responsive personal portfolio website built with React, showcasing the work and skills of Shaik Mohammad Yaseen, a Frontend Developer. The application features a single-page design with smooth scrolling navigation, animated sections, and a contact form.
+This is a modern, responsive personal portfolio website built with React, showcasing the work and skills of Shaik Mohammad Yaseen, a Frontend Developer. The application features a single-page design with smooth scrolling navigation, animated sections, and a contact form. The design uses a dark, nature-inspired aesthetic with a rich forest green color palette for a calm, professional, and elegant feel.
 
 ## User Preferences
 
@@ -44,10 +44,19 @@ Preferred communication style: Simple, everyday language.
 9. **Contact Section**: Interactive contact form with validation
 
 ### UI System
-- **Design System**: Shadcn/ui components with consistent theming
-- **Theme**: Dark theme with cyan/blue accent colors
+- **Design System**: Shadcn/ui components with consistent dark nature theming
+- **Theme**: Dark nature-inspired theme with Deep Forest Green background (#1E2B26), Ivory White text (#FAF8F1), and Sage Green accents (#9DBF9E)
+- **Color Palette**: 
+  - Background: Deep Forest Green (#1E2B26)
+  - Text: Ivory White (#FAF8F1) 
+  - Primary: Sage Green (#9DBF9E)
+  - Hover: Forest Green (#4B715D)
+  - Borders: Olive Gray (#7C8F84)
+  - Cards: Charcoal Green (#26332D)
+  - Muted Text: Pale Sage (#C6D2C1)
 - **Typography**: Inter font family for modern appearance
 - **Responsive Design**: Mobile-first approach with Tailwind breakpoints
+- **Design Philosophy**: Clean typography, ample white space, smooth micro-interactions, rounded corners, and soft shadows for a warm, human-centered feel
 
 ### Backend Services
 - **Contact API**: POST `/api/contact` for form submissions

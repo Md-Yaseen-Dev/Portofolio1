@@ -17,13 +17,13 @@ export default function HeroSection() {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-16 bg-background"
     >
-      {/* Soft nature-inspired background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-muted opacity-60"></div>
+      {/* Dark nature-inspired background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-muted"></div>
       
-      {/* Gentle floating elements */}
-      <div className="absolute w-64 h-64 top-10 left-10 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute w-96 h-96 bottom-20 right-10 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      {/* Subtle floating elements for dark theme */}
+      <div className="absolute w-64 h-64 top-10 left-10 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute w-96 h-96 bottom-20 right-10 bg-accent/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
@@ -76,7 +76,7 @@ export default function HeroSection() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-muted rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
+                className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -88,7 +88,7 @@ export default function HeroSection() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-muted rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
+                className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
