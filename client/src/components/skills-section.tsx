@@ -47,7 +47,7 @@ export default function SkillsSection() {
           </div>
         </EnhancedScrollAnimation>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 max-w-full">
           {skills.map((skill, index) => (
             <EnhancedScrollAnimation 
               key={index}
@@ -133,21 +133,22 @@ export default function SkillsSection() {
         
         {/* Infinite Scrolling Skills Bar */}
         <motion.div 
-          className="mt-16 overflow-hidden"
+          className="mt-16 overflow-hidden w-full"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
           <motion.div
-            className="flex space-x-8 text-4xl font-bold gradient-text whitespace-nowrap"
-            animate={{ x: [-1000, 0] }}
+            className="flex space-x-8 text-2xl md:text-4xl font-bold gradient-text whitespace-nowrap"
+            animate={{ x: [-100, -50] }}
             transition={{ 
               duration: 20, 
               repeat: Infinity,
               ease: "linear"
             }}
+            style={{ width: "200%" }}
           >
-            {[...skills, ...skills].map((skill, index) => (
+            {[...skills, ...skills, ...skills].map((skill, index) => (
               <span key={index} className="inline-block">
                 {skill.name} • 
               </span>

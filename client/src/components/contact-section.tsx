@@ -77,7 +77,7 @@ export default function ContactSection() {
           </div>
         </EnhancedScrollAnimation>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-full">
           {/* Contact Form */}
           <EnhancedScrollAnimation direction="left" delay={0.3}>
             <motion.div

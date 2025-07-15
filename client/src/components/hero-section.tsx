@@ -98,7 +98,7 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 300 }}
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="code-block rounded-2xl p-8 text-left shadow-2xl backdrop-blur-sm">
+            <div className="code-block rounded-2xl p-4 md:p-8 text-left shadow-2xl backdrop-blur-sm overflow-hidden">
               <div className="flex items-center mb-6">
                 <div className="flex space-x-3">
                   <motion.div 
@@ -118,7 +118,7 @@ export default function HeroSection() {
                   />
                 </div>
               </div>
-              <pre className="text-sm md:text-base text-slate-300 font-mono overflow-x-auto leading-relaxed">
+              <pre className="text-xs md:text-sm text-slate-300 font-mono leading-relaxed whitespace-pre-wrap break-words">
 {`const coder = {
   name: 'Shaik Mohammad Yaseen',
   skills: ['React', 'NextJS', 'Framer Motion', 'TypeScript', 'Three.js'],

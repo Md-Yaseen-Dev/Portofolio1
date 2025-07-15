@@ -57,7 +57,7 @@ export default function ProjectsSection() {
           </div>
         </EnhancedScrollAnimation>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-full">
           {projects.map((project, index) => (
             <EnhancedScrollAnimation 
               key={index}
@@ -92,7 +92,7 @@ export default function ProjectsSection() {
                 </motion.h3>
                 
                 <motion.div 
-                  className="bg-slate-900/80 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto relative backdrop-blur-sm border border-slate-700/50"
+                  className="bg-slate-900/80 rounded-xl p-4 md:p-6 mb-6 font-mono text-xs md:text-sm overflow-hidden relative backdrop-blur-sm border border-slate-700/50"
                   whileHover={{ 
                     backgroundColor: "rgba(15, 23, 42, 0.9)",
                     borderColor: "rgba(168, 85, 247, 0.3)"
@@ -123,12 +123,12 @@ export default function ProjectsSection() {
                     <span className="ml-4 text-slate-400 text-xs">project.js</span>
                   </div>
                   
-                  <pre className="text-slate-300 leading-relaxed">
+                  <pre className="text-slate-300 leading-relaxed whitespace-pre-wrap break-words">
 {`const project = {
   name: '${project.name}',
   tools: [${project.tools.map(tool => `'${tool}'`).join(', ')}],
   myRole: '${project.role}',
-  description: '${project.description.slice(0, 80)}...'
+  description: '${project.description.slice(0, 60)}...'
 };`}
                   </pre>
                   
