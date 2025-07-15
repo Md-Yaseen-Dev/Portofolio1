@@ -22,7 +22,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-secondary relative overflow-hidden">
+    <section id="skills" className="py-20 bg-secondary relative overflow-visible">
       {/* Background Effects */}
       <div className="absolute inset-0 parallax-bg opacity-30"></div>
       
@@ -47,7 +47,7 @@ export default function SkillsSection() {
           </div>
         </EnhancedScrollAnimation>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 max-w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 max-w-full overflow-visible">
           {skills.map((skill, index) => (
             <EnhancedScrollAnimation 
               key={index}
@@ -55,12 +55,12 @@ export default function SkillsSection() {
               delay={index * 0.1}
             >
               <motion.div 
-                className="skill-card rounded-xl p-6 text-center relative group hover:z-50"
+                className="skill-card rounded-xl p-6 text-center relative group"
                 whileHover={{ 
                   scale: 1.1,
                   rotateY: 10,
                   rotateX: 5,
-                  zIndex: 50
+                  zIndex: 999
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ 
@@ -68,7 +68,10 @@ export default function SkillsSection() {
                   stiffness: 300,
                   damping: 20
                 }}
-                style={{ transformStyle: "preserve-3d" }}
+                style={{ 
+                  transformStyle: "preserve-3d",
+                  transformOrigin: "center center"
+                }}
               >
                 {/* Hover Glow Effect */}
                 <motion.div

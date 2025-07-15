@@ -287,7 +287,7 @@
     background: var(--card);
     border: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 0.75rem;
   }
   
@@ -308,10 +308,10 @@
   }
   
   .skill-card:hover {
-    transform: translateY(-8px) rotateX(2deg);
+    transform: translateY(-8px) rotateX(2deg) scale(1.05);
     box-shadow: 0 25px 50px -12px rgba(50, 255, 196, 0.4), 0 0 20px rgba(161, 98, 247, 0.3);
     border-color: var(--primary);
-    z-index: 50;
+    z-index: 999;
     position: relative;
   }
   
