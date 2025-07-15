@@ -57,11 +57,11 @@ export default function HeroSection() {
                 </div>
               </div>
               <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 text-white leading-tight hero-text">
-                <span className="inline">I'm a Professional </span>
-                <span className="inline text-cyan-400">
+                <div className="block">I'm a Professional</div>
+                <div className="block text-cyan-400">
                   <RoleSlider />
-                </span>
-                <span className="inline text-white">.</span>
+                  <span className="text-white">.</span>
+                </div>
               </div>
             </div>
             
