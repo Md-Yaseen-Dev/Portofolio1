@@ -58,10 +58,10 @@ export default function HeroSection() {
               </div>
               <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 text-white leading-tight hero-text">
                 <span className="inline">I'm a Professional </span>
-                <span className="text-cyan-400 inline">
+                <span className="inline text-cyan-400">
                   <RoleSlider />
                 </span>
-                <span className="inline">.</span>
+                <span className="inline text-white">.</span>
               </div>
             </div>
             
