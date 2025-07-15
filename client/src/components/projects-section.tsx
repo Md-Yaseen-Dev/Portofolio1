@@ -47,7 +47,7 @@ export default function ProjectsSection() {
               PROJECTS
             </motion.h2>
             <motion.p
-              className="text-xl text-slate-400"
+              className="text-xl text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}

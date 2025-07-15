@@ -56,21 +56,17 @@ export default function Navigation() {
     <motion.nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-slate-900 shadow-lg border-b border-slate-700" 
+          ? "bg-background/95 shadow-lg border-b border-border backdrop-blur-sm" 
           : "bg-transparent border-b border-transparent"
       }`}
-      style={{
-        backgroundColor: scrolled ? 'rgb(15, 23, 42)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none'
-      }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div 
-            className="text-xl font-bold text-cyan-400 cursor-pointer"
+            className="text-xl font-bold text-foreground cursor-pointer hover:text-primary transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleNavClick("#home")}
@@ -86,8 +82,8 @@ export default function Navigation() {
                   onClick={() => handleNavClick(item.href)}
                   className={`px-2 py-2 font-medium text-sm tracking-wider transition-all duration-300 relative ${
                     activeSection === item.href.slice(1) 
-                      ? "text-white" 
-                      : "text-slate-300 hover:text-white"
+                      ? "text-primary" 
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

@@ -20,7 +20,7 @@ export default function AboutSection() {
               ABOUT ME
             </motion.h2>
             <motion.p 
-              className="text-xl text-slate-400 mb-8"
+              className="text-xl text-muted-foreground mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -38,7 +38,7 @@ export default function AboutSection() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <motion.p 
-                className="text-lg text-slate-300 leading-relaxed"
+                className="text-lg text-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}

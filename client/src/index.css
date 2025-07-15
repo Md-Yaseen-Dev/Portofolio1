@@ -3,56 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(218, 47%, 7%);
-  --foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(218, 47%, 7%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --card: hsl(217, 32%, 17%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 27%);
-  --input: hsl(217, 32%, 27%);
-  --primary: hsl(280, 100%, 60%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --accent: hsl(320, 100%, 65%);
-  --accent-foreground: hsl(210, 40%, 98%);
+  /* Nature-inspired color palette */
+  --background: hsl(52, 29%, 97%); /* Ivory Cream #FAF8F1 */
+  --foreground: hsl(109, 8%, 18%); /* Deep Olive #2E3D30 */
+  --muted: hsl(52, 12%, 90%); /* Light warm neutral */
+  --muted-foreground: hsl(109, 4%, 45%); /* Muted olive */
+  --popover: hsl(52, 29%, 97%);
+  --popover-foreground: hsl(109, 8%, 18%);
+  --card: hsl(52, 25%, 95%); /* Slightly warmer card background */
+  --card-foreground: hsl(109, 8%, 18%);
+  --border: hsl(44, 9%, 81%); /* Soft Taupe #CFCFC4 */
+  --input: hsl(44, 9%, 81%);
+  --primary: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
+  --primary-foreground: hsl(52, 29%, 97%);
+  --secondary: hsl(52, 25%, 95%);
+  --secondary-foreground: hsl(109, 8%, 18%);
+  --accent: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
+  --accent-foreground: hsl(52, 29%, 97%);
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(280, 100%, 60%);
-  --radius: 0.5rem;
+  --destructive-foreground: hsl(52, 29%, 97%);
+  --ring: hsl(120, 23%, 70%);
+  --radius: 0.75rem;
   
-  /* Dynamic gradient colors */
-  --gradient-1: hsl(280, 100%, 60%);
-  --gradient-2: hsl(320, 100%, 65%);
-  --gradient-3: hsl(240, 100%, 70%);
-  --gradient-4: hsl(200, 100%, 60%);
-  --gradient-5: hsl(160, 100%, 50%);
+  /* Nature-inspired gradients */
+  --gradient-1: hsl(120, 23%, 70%); /* Sage Green */
+  --gradient-2: hsl(120, 20%, 45%); /* Forest Green */
+  --gradient-3: hsl(52, 29%, 97%); /* Ivory Cream */
+  --gradient-4: hsl(44, 9%, 81%); /* Soft Taupe */
+  --gradient-5: hsl(109, 8%, 18%); /* Deep Olive */
+  
+  /* Custom nature colors */
+  --sage-green: hsl(120, 23%, 70%); /* #9DBF9E */
+  --forest-green: hsl(120, 20%, 45%); /* #4B715D */
+  --deep-olive: hsl(109, 8%, 18%); /* #2E3D30 */
+  --ivory-cream: hsl(52, 29%, 97%); /* #FAF8F1 */
+  --soft-taupe: hsl(44, 9%, 81%); /* #CFCFC4 */
 }
 
 .dark {
-  --background: hsl(218, 47%, 7%);
-  --foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(218, 47%, 7%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --card: hsl(217, 32%, 17%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 27%);
-  --input: hsl(217, 32%, 27%);
-  --primary: hsl(200, 95%, 55%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --accent: hsl(188, 95%, 55%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(200, 95%, 55%);
-  --radius: 0.5rem;
+  /* Keep nature theme even in dark mode with darker variants */
+  --background: hsl(109, 15%, 12%); /* Dark olive background */
+  --foreground: hsl(52, 29%, 95%); /* Light cream text */
+  --muted: hsl(109, 10%, 20%);
+  --muted-foreground: hsl(52, 15%, 70%);
+  --popover: hsl(109, 15%, 12%);
+  --popover-foreground: hsl(52, 29%, 95%);
+  --card: hsl(109, 12%, 15%);
+  --card-foreground: hsl(52, 29%, 95%);
+  --border: hsl(109, 8%, 25%);
+  --input: hsl(109, 8%, 25%);
+  --primary: hsl(120, 23%, 60%); /* Slightly darker sage */
+  --primary-foreground: hsl(109, 15%, 12%);
+  --secondary: hsl(109, 12%, 15%);
+  --secondary-foreground: hsl(52, 29%, 95%);
+  --accent: hsl(120, 23%, 60%);
+  --accent-foreground: hsl(109, 15%, 12%);
+  --destructive: hsl(0, 62%, 50%);
+  --destructive-foreground: hsl(52, 29%, 95%);
+  --ring: hsl(120, 23%, 60%);
+  --radius: 0.75rem;
 }
 
 @layer base {
@@ -61,7 +70,6 @@
   }
 
   html {
-    overflow-y: hidden; /* Completely hide vertical scroll */
     overflow-x: hidden; /* Hide horizontal scroll */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -74,10 +82,9 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    overflow: hidden; /* Prevent all scrolling */
+    overflow-x: hidden; /* Allow vertical scroll, hide horizontal */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
-    height: 100vh; /* Full viewport height */
     margin: 0;
     padding: 0;
   }
@@ -178,29 +185,29 @@
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 25%, var(--gradient-3) 50%, var(--gradient-4) 75%, var(--gradient-5) 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
+    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 50%, var(--deep-olive) 100%);
+    background-size: 300% 300%;
+    animation: gentleShift 12s ease infinite;
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 25%, var(--gradient-3) 50%, var(--gradient-4) 75%, var(--gradient-5) 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
+    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 100%);
+    background-size: 200% 200%;
+    animation: gentleShift 8s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .interactive-gradient {
-    background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 100%);
+    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 100%);
     background-size: 200% 200%;
     transition: all 0.3s ease;
   }
   
   .interactive-gradient:hover {
     background-position: 100% 100%;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   
   .blur-effect {
@@ -357,13 +364,19 @@
   }
   
   .parallax-bg {
-    background: radial-gradient(circle at 20% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, var(--sage-green) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--forest-green) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, var(--primary) 0%, transparent 50%);
+    opacity: 0.1;
     animation: parallaxMove 20s ease-in-out infinite;
   }
 
   @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes gentleShift {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
   }
