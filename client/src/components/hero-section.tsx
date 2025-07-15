@@ -100,7 +100,7 @@ export default function HeroSection() {
             
             {/* Animated Buttons */}
             <motion.div 
-              className="flex flex-row gap-3 lg:gap-4 max-w-lg"
+              className="flex flex-row gap-4 lg:gap-4 max-w-lg mx-4"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2 }}
@@ -108,10 +108,11 @@ export default function HeroSection() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="flex-1"
               >
                 <Button 
                   onClick={handleContactClick}
-                  className="bg-transparent border-2 border-white text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap"
+                  className="bg-transparent border-2 border-white text-white px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap w-full"
                 >
                   CONTACT ME 📧
                 </Button>
@@ -119,9 +120,10 @@ export default function HeroSection() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="flex-1"
               >
                 <Button 
-                  className="bg-pink-500 hover:bg-pink-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg transition-all duration-300 whitespace-nowrap"
+                  className="bg-pink-500 hover:bg-pink-600 text-white px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap w-full"
                 >
                   GET RESUME 📄
                 </Button>
