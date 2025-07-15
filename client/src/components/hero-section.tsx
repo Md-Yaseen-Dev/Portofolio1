@@ -98,7 +98,10 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 300 }}
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="code-block rounded-2xl p-4 md:p-8 text-left shadow-2xl backdrop-blur-sm overflow-hidden">
+            <div 
+              className="code-block rounded-2xl p-4 md:p-8 text-left shadow-2xl backdrop-blur-sm overflow-hidden"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               <div className="flex items-center mb-6">
                 <div className="flex space-x-3">
                   <motion.div 

@@ -93,6 +93,7 @@ export default function ProjectsSection() {
                 
                 <motion.div 
                   className="bg-slate-900/80 rounded-xl p-4 md:p-6 mb-6 font-mono text-xs md:text-sm overflow-hidden relative backdrop-blur-sm border border-slate-700/50"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                   whileHover={{ 
                     backgroundColor: "rgba(15, 23, 42, 0.9)",
                     borderColor: "rgba(168, 85, 247, 0.3)"
