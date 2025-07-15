@@ -21,27 +21,24 @@ export default function RoleSlider() {
   }, []);
 
   return (
-    <span className="inline-flex items-center overflow-hidden">
+    <span className="inline-flex items-baseline overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentRole}
           initial={{ 
             opacity: 0, 
             rotateX: -90,
-            scale: 0.8,
-            y: 10
+            scale: 0.8
           }}
           animate={{ 
             opacity: 1, 
             rotateX: 0,
-            scale: 1,
-            y: 0
+            scale: 1
           }}
           exit={{ 
             opacity: 0, 
             rotateX: 90,
-            scale: 0.8,
-            y: -10
+            scale: 0.8
           }}
           transition={{
             duration: 0.8,
@@ -49,7 +46,7 @@ export default function RoleSlider() {
             stiffness: 100,
             damping: 15
           }}
-          className="font-bold gradient-text inline-block"
+          className="font-bold gradient-text inline-block whitespace-nowrap"
           style={{
             transformStyle: "preserve-3d",
             perspective: "1000px"
