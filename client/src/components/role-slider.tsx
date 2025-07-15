@@ -27,7 +27,7 @@ export default function RoleSlider() {
           key={currentRole}
           initial={{ 
             opacity: 0, 
-            rotateX: -90,
+            rotateX: 90,
             scale: 0.8
           }}
           animate={{ 
@@ -37,7 +37,7 @@ export default function RoleSlider() {
           }}
           exit={{ 
             opacity: 0, 
-            rotateX: 90,
+            rotateX: -90,
             scale: 0.8
           }}
           transition={{
