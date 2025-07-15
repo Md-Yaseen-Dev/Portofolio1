@@ -10,7 +10,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 10);
       
       // Update active section based on scroll position
       const sections = ["home", "about", "experience", "skills", "projects", "education", "blog", "contact"];
@@ -52,7 +52,7 @@ export default function Navigation() {
     <motion.nav 
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled 
-          ? "navbar-backdrop" 
+          ? "navbar-backdrop bg-slate-900" 
           : "bg-transparent border-b border-transparent"
       }`}
       initial={{ y: -100 }}
