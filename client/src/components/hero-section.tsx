@@ -100,7 +100,7 @@ export default function HeroSection() {
             
             {/* Animated Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-3 lg:gap-4 max-w-lg"
+              className="flex flex-row gap-3 lg:gap-4 max-w-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2 }}
