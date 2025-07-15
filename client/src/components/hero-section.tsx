@@ -26,44 +26,44 @@ export default function HeroSection() {
       <div className="floating-orb w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-left"
+            className="text-left order-1 lg:order-1 flex flex-col justify-center max-w-none hero-left-column"
           >
             {/* Animated Greeting */}
-            <div className="mb-8">
+            <div className="mb-6 lg:mb-8">
               <AnimatedText 
                 text="Hello," 
-                className="text-4xl md:text-6xl font-bold mb-4 block text-white"
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 lg:mb-4 block text-white leading-tight"
                 animationType="bounce"
                 delay={500}
               />
-              <div className="text-3xl md:text-5xl font-bold mb-4 text-white">
-                This is{" "}
+              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-white leading-tight hero-text">
+                <span className="block sm:inline">This is </span>
                 <AnimatedText 
                   text="Shaik Mohammad Yaseen" 
                   className="text-pink-500"
                   animationType="slide"
                   delay={1000}
                 />
-                ,
+                <span className="inline">,</span>
               </div>
-              <div className="text-2xl md:text-4xl font-bold mb-8 text-white">
-                I'm a Professional{" "}
-                <span className="text-cyan-400">
+              <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 text-white leading-tight hero-text">
+                <span className="block sm:inline">I'm a Professional </span>
+                <span className="text-cyan-400 inline-block">
                   <RoleSlider />
                 </span>
-                .
+                <span className="inline">.</span>
               </div>
             </div>
             
             {/* Social Icons */}
             <motion.div 
-              className="flex gap-4 mb-8"
+              className="flex gap-4 mb-6 lg:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
@@ -96,7 +96,7 @@ export default function HeroSection() {
             
             {/* Animated Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 lg:gap-4 max-w-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2 }}
@@ -107,7 +107,7 @@ export default function HeroSection() {
               >
                 <Button 
                   onClick={handleContactClick}
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-black transition-all duration-300"
+                  className="bg-transparent border-2 border-white text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap"
                 >
                   CONTACT ME 📧
                 </Button>
@@ -117,7 +117,7 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button 
-                  className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                  className="bg-pink-500 hover:bg-pink-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg transition-all duration-300 whitespace-nowrap"
                 >
                   GET RESUME 📄
                 </Button>
@@ -130,10 +130,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="relative"
+            className="relative order-2 lg:order-2 flex items-center justify-center lg:justify-end hero-right-column"
           >
             <div 
-              className="bg-slate-900/90 rounded-2xl p-6 text-left shadow-2xl backdrop-blur-sm overflow-hidden border border-slate-700/50"
+              className="bg-slate-900/90 rounded-2xl p-4 lg:p-6 text-left shadow-2xl backdrop-blur-sm overflow-hidden border border-slate-700/50 w-full max-w-lg mx-auto lg:mx-0"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               <div className="flex items-center mb-6">
