@@ -10,7 +10,8 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const scrollY = window.scrollY || window.pageYOffset;
+      setScrolled(scrollY > 5);
       
       // Update active section based on scroll position
       const sections = ["home", "about", "experience", "skills", "projects", "education", "blog", "contact"];
@@ -28,6 +29,9 @@ export default function Navigation() {
       }
     };
 
+    // Call once to set initial state
+    handleScroll();
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -50,11 +54,15 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "navbar-backdrop bg-slate-900" 
+          ? "bg-slate-900 shadow-lg border-b border-slate-700" 
           : "bg-transparent border-b border-transparent"
       }`}
+      style={{
+        backgroundColor: scrolled ? 'rgb(15, 23, 42)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(20px)' : 'none'
+      }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
