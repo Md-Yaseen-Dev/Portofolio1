@@ -60,7 +60,7 @@ export default function Navigation() {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-16">
           <motion.div 
             className="text-xl font-bold text-cyan-400 cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -70,34 +70,36 @@ export default function Navigation() {
             Shaik Mohammad Yaseen
           </motion.div>
           
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.name}
-                onClick={() => handleNavClick(item.href)}
-                className={`px-2 py-2 font-medium text-sm tracking-wider transition-all duration-300 relative ${
-                  activeSection === item.href.slice(1) 
-                    ? "text-white" 
-                    : "text-slate-300 hover:text-white"
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item.name}
-              </motion.button>
-            ))}
-          </div>
-          
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden relative"
-              onClick={() => setIsOpen(!isOpen)}
+          <div className="flex items-center">
+            <div className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <motion.button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.href)}
+                  className={`px-2 py-2 font-medium text-sm tracking-wider transition-all duration-300 relative ${
+                    activeSection === item.href.slice(1) 
+                      ? "text-white" 
+                      : "text-slate-300 hover:text-white"
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.name}
+                </motion.button>
+              ))}
+            </div>
+            
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="md:hidden ml-4"
             >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="relative"
+                onClick={() => setIsOpen(!isOpen)}
+              >
               <AnimatePresence mode="wait">
                 {isOpen ? (
                   <motion.div
@@ -123,6 +125,7 @@ export default function Navigation() {
               </AnimatePresence>
             </Button>
           </motion.div>
+          </div>
         </div>
         
         {/* Mobile Menu */}
