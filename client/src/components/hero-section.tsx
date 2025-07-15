@@ -42,15 +42,19 @@ export default function HeroSection() {
                 animationType="bounce"
                 delay={500}
               />
-              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-white leading-tight hero-text">
-                <span className="block sm:inline">This is </span>
-                <AnimatedText 
-                  text="Shaik Mohammad Yaseen" 
-                  className="text-pink-500"
-                  animationType="slide"
-                  delay={1000}
-                />
-                <span className="inline">,</span>
+              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-white leading-tight">
+                <div className="flex flex-wrap items-baseline">
+                  <span className="mr-2">This is </span>
+                  <span className="whitespace-nowrap text-pink-500">
+                    <AnimatedText 
+                      text="Shaik Mohammad Yaseen" 
+                      className="text-pink-500"
+                      animationType="slide"
+                      delay={1000}
+                    />
+                    <span className="text-white">,</span>
+                  </span>
+                </div>
               </div>
               <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 text-white leading-tight hero-text">
                 <span className="block sm:inline">I'm a Professional </span>
