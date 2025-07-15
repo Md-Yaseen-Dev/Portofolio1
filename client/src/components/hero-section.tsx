@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-16"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 parallax-bg"></div>

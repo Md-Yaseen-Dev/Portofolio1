@@ -67,10 +67,16 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed navbar */
   }
 }
 
 @layer utilities {
+  /* Ensure sections don't overlap with fixed navbar */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+  
   .gradient-bg {
     background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 25%, var(--gradient-3) 50%, var(--gradient-4) 75%, var(--gradient-5) 100%);
     background-size: 400% 400%;
