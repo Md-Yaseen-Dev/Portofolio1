@@ -55,12 +55,12 @@ export default function SkillsSection() {
               delay={index * 0.1}
             >
               <motion.div 
-                className="skill-card rounded-xl p-6 text-center relative group"
+                className="skill-card rounded-xl p-6 text-center relative group hover:z-50"
                 whileHover={{ 
                   scale: 1.1,
                   rotateY: 10,
                   rotateX: 5,
-                  z: 50
+                  zIndex: 50
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ 
