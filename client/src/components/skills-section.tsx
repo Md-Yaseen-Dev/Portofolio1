@@ -140,15 +140,15 @@ export default function SkillsSection() {
         >
           <motion.div
             className="flex space-x-8 text-2xl md:text-4xl font-bold gradient-text whitespace-nowrap"
-            animate={{ x: [-100, -50] }}
+            animate={{ x: ["0%", "-50%"] }}
             transition={{ 
-              duration: 20, 
+              duration: 30, 
               repeat: Infinity,
               ease: "linear"
             }}
             style={{ width: "200%" }}
           >
-            {[...skills, ...skills, ...skills].map((skill, index) => (
+            {[...skills, ...skills].map((skill, index) => (
               <span key={index} className="inline-block">
                 {skill.name} • 
               </span>

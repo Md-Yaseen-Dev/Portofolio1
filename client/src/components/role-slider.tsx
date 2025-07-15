@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 const roles = [
   "Frontend Developer",
   "Creative Coder", 
-  "UI/UX Explorer",
   "React Specialist",
   "Animation Expert"
 ];
