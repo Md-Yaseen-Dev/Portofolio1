@@ -213,9 +213,9 @@
   .navbar-backdrop {
     backdrop-filter: blur(20px) saturate(180%);
     background: linear-gradient(135deg, 
-      rgba(15, 23, 42, 0.98) 0%, 
-      rgba(30, 41, 59, 0.96) 50%, 
-      rgba(15, 23, 42, 0.98) 100%);
+      rgb(15, 23, 42) 0%, 
+      rgb(30, 41, 59) 50%, 
+      rgb(15, 23, 42) 100%);
     border-bottom: 1px solid rgba(168, 85, 247, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
