@@ -142,7 +142,7 @@ export default function SkillsSection() {
             className="flex space-x-8 text-2xl md:text-4xl font-bold gradient-text whitespace-nowrap"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ 
-              duration: 30, 
+              duration: 15, 
               repeat: Infinity,
               ease: "linear"
             }}
