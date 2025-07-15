@@ -41,14 +41,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Education", href: "#education" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "ABOUT", href: "#about" },
+    { name: "EXPERIENCE", href: "#experience" },
+    { name: "SKILLS", href: "#skills" },
+    { name: "EDUCATION", href: "#education" },
+    { name: "PROJECTS", href: "#projects" },
   ];
 
   return (
@@ -65,7 +62,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div 
-            className="text-xl font-bold gradient-text cursor-pointer"
+            className="text-xl font-bold text-cyan-400 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleNavClick("#home")}
@@ -73,12 +70,12 @@ export default function Navigation() {
             Shaik Mohammad Yaseen
           </motion.div>
           
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 relative ${
+                className={`px-2 py-2 font-medium text-sm tracking-wider transition-all duration-300 relative ${
                   activeSection === item.href.slice(1) 
                     ? "text-white" 
                     : "text-slate-300 hover:text-white"
@@ -86,16 +83,7 @@ export default function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {activeSection === item.href.slice(1) && (
-                  <motion.div
-                    className="absolute inset-0 gradient-bg rounded-lg"
-                    layoutId="activeNav"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-                <span className="relative z-10">{item.name}</span>
+                {item.name}
               </motion.button>
             ))}
           </div>
