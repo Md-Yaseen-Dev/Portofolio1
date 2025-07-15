@@ -10,7 +10,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
       
       // Update active section based on scroll position
       const sections = ["home", "about", "experience", "skills", "projects", "education", "blog", "contact"];
@@ -53,8 +53,10 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "blur-effect border-b border-purple-500/20" : "bg-background/80 border-b border-slate-800/50"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled 
+          ? "navbar-backdrop" 
+          : "bg-transparent border-b border-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -139,7 +141,7 @@ export default function Navigation() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden absolute top-16 left-0 right-0 blur-effect border-b border-purple-500/20"
+              className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-purple-500/30 shadow-2xl shadow-purple-500/10"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
