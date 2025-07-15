@@ -57,8 +57,9 @@ export default function Navigation() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? "glassmorphism shadow-lg border-b border-border" 
-          : "bg-transparent border-b border-transparent"
+          : "border-b border-transparent"
       }`}
+      style={{ backgroundColor: '#1C1C28' }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
