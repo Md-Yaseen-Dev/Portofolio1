@@ -56,7 +56,7 @@ export default function Navigation() {
     <motion.nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-background/95 shadow-lg border-b border-border backdrop-blur-sm" 
+          ? "glassmorphism shadow-lg border-b border-border" 
           : "bg-transparent border-b border-transparent"
       }`}
       initial={{ y: -100 }}
@@ -66,7 +66,7 @@ export default function Navigation() {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div 
-            className="text-xl font-bold text-foreground cursor-pointer hover:text-primary transition-colors duration-300"
+            className="text-xl font-bold text-foreground cursor-pointer hover:text-primary transition-colors duration-300 hover:glow-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleNavClick("#home")}
@@ -136,7 +136,7 @@ export default function Navigation() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-purple-500/30 shadow-2xl shadow-purple-500/10"
+              className="md:hidden absolute top-16 left-0 right-0 glassmorphism border-b border-primary/30 shadow-2xl shadow-primary/10"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -149,8 +149,8 @@ export default function Navigation() {
                     onClick={() => handleNavClick(item.href)}
                     className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                       activeSection === item.href.slice(1)
-                        ? "gradient-bg text-white"
-                        : "hover:bg-secondary text-slate-300"
+                        ? "gradient-bg text-white glow-primary"
+                        : "hover:bg-secondary text-muted-foreground hover:text-foreground hover:glow-primary"
                     }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}

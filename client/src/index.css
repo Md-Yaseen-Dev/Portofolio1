@@ -1,68 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Dark nature-inspired color palette */
-  --background: hsl(137, 18%, 15%); /* Deep Forest Green #1E2B26 */
-  --foreground: hsl(52, 29%, 97%); /* Ivory White #FAF8F1 */
-  --muted: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
-  --muted-foreground: hsl(120, 15%, 80%); /* Pale Sage #C6D2C1 */
-  --popover: hsl(137, 18%, 15%);
-  --popover-foreground: hsl(52, 29%, 97%);
-  --card: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
-  --card-foreground: hsl(52, 29%, 97%);
-  --border: hsl(120, 12%, 52%); /* Olive Gray #7C8F84 */
-  --input: hsl(120, 12%, 52%);
-  --primary: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
-  --primary-foreground: hsl(137, 18%, 15%);
-  --secondary: hsl(137, 12%, 20%);
-  --secondary-foreground: hsl(52, 29%, 97%);
-  --accent: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
-  --accent-foreground: hsl(137, 18%, 15%);
+  /* High-end dark futuristic color palette */
+  --background: hsl(240, 33%, 7%); /* Midnight Navy #0F0F1C */
+  --foreground: hsl(0, 0%, 96%); /* Platinum White #F4F4F4 */
+  --muted: hsl(240, 15%, 16%); /* Space Gray #1C1C28 */
+  --muted-foreground: hsl(0, 0%, 63%); /* Cool Gray #A1A1AA */
+  --popover: hsl(240, 15%, 16%);
+  --popover-foreground: hsl(0, 0%, 96%);
+  --card: hsl(240, 15%, 16%); /* Space Gray #1C1C28 */
+  --card-foreground: hsl(0, 0%, 96%);
+  --border: hsl(240, 17%, 20%); /* Graphite Gray #2E2E3A */
+  --input: hsl(240, 17%, 20%);
+  --primary: hsl(154, 100%, 59%); /* Neon Mint #32FFC4 */
+  --primary-foreground: hsl(240, 33%, 7%);
+  --secondary: hsl(240, 15%, 16%);
+  --secondary-foreground: hsl(0, 0%, 96%);
+  --accent: hsl(270, 91%, 67%); /* Electric Purple #A162F7 */
+  --accent-foreground: hsl(0, 0%, 96%);
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(52, 29%, 97%);
-  --ring: hsl(120, 23%, 70%);
+  --destructive-foreground: hsl(0, 0%, 96%);
+  --ring: hsl(154, 100%, 59%);
   --radius: 0.75rem;
   
-  /* Dark nature-inspired gradients */
-  --gradient-1: hsl(120, 23%, 70%); /* Sage Green */
-  --gradient-2: hsl(120, 20%, 45%); /* Forest Green */
-  --gradient-3: hsl(137, 18%, 15%); /* Deep Forest Green */
-  --gradient-4: hsl(120, 12%, 52%); /* Olive Gray */
-  --gradient-5: hsl(52, 29%, 97%); /* Ivory White */
+  /* High-end futuristic gradients */
+  --gradient-1: hsl(154, 100%, 59%); /* Neon Mint */
+  --gradient-2: hsl(270, 91%, 67%); /* Electric Purple */
+  --gradient-3: hsl(45, 100%, 70%); /* Royal Gold */
+  --gradient-4: hsl(240, 17%, 20%); /* Graphite Gray */
+  --gradient-5: hsl(0, 0%, 96%); /* Platinum White */
   
-  /* Custom dark nature colors */
-  --sage-green: hsl(120, 23%, 70%); /* #9DBF9E */
-  --forest-green: hsl(120, 20%, 45%); /* #4B715D */
-  --deep-forest: hsl(137, 18%, 15%); /* #1E2B26 */
-  --ivory-white: hsl(52, 29%, 97%); /* #FAF8F1 */
-  --olive-gray: hsl(120, 12%, 52%); /* #7C8F84 */
-  --charcoal-green: hsl(137, 12%, 20%); /* #26332D */
-  --pale-sage: hsl(120, 15%, 80%); /* #C6D2C1 */
+  /* Custom futuristic colors */
+  --neon-mint: hsl(154, 100%, 59%); /* #32FFC4 */
+  --electric-purple: hsl(270, 91%, 67%); /* #A162F7 */
+  --royal-gold: hsl(45, 100%, 70%); /* #FFD56B */
+  --midnight-navy: hsl(240, 33%, 7%); /* #0F0F1C */
+  --space-gray: hsl(240, 15%, 16%); /* #1C1C28 */
+  --platinum-white: hsl(0, 0%, 96%); /* #F4F4F4 */
+  --graphite-gray: hsl(240, 17%, 20%); /* #2E2E3A */
+  --cool-gray: hsl(0, 0%, 63%); /* #A1A1AA */
 }
 
 .dark {
-  /* Inherit the same dark nature theme - no changes needed */
-  --background: hsl(137, 18%, 15%); /* Deep Forest Green #1E2B26 */
-  --foreground: hsl(52, 29%, 97%); /* Ivory White #FAF8F1 */
-  --muted: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
-  --muted-foreground: hsl(120, 15%, 80%); /* Pale Sage #C6D2C1 */
-  --popover: hsl(137, 18%, 15%);
-  --popover-foreground: hsl(52, 29%, 97%);
-  --card: hsl(137, 12%, 20%); /* Charcoal Green #26332D */
-  --card-foreground: hsl(52, 29%, 97%);
-  --border: hsl(120, 12%, 52%); /* Olive Gray #7C8F84 */
-  --input: hsl(120, 12%, 52%);
-  --primary: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
-  --primary-foreground: hsl(137, 18%, 15%);
-  --secondary: hsl(137, 12%, 20%);
-  --secondary-foreground: hsl(52, 29%, 97%);
-  --accent: hsl(120, 23%, 70%); /* Sage Green #9DBF9E */
-  --accent-foreground: hsl(137, 18%, 15%);
+  /* Inherit the same futuristic theme - no changes needed */
+  --background: hsl(240, 33%, 7%); /* Midnight Navy #0F0F1C */
+  --foreground: hsl(0, 0%, 96%); /* Platinum White #F4F4F4 */
+  --muted: hsl(240, 15%, 16%); /* Space Gray #1C1C28 */
+  --muted-foreground: hsl(0, 0%, 63%); /* Cool Gray #A1A1AA */
+  --popover: hsl(240, 15%, 16%);
+  --popover-foreground: hsl(0, 0%, 96%);
+  --card: hsl(240, 15%, 16%); /* Space Gray #1C1C28 */
+  --card-foreground: hsl(0, 0%, 96%);
+  --border: hsl(240, 17%, 20%); /* Graphite Gray #2E2E3A */
+  --input: hsl(240, 17%, 20%);
+  --primary: hsl(154, 100%, 59%); /* Neon Mint #32FFC4 */
+  --primary-foreground: hsl(240, 33%, 7%);
+  --secondary: hsl(240, 15%, 16%);
+  --secondary-foreground: hsl(0, 0%, 96%);
+  --accent: hsl(270, 91%, 67%); /* Electric Purple #A162F7 */
+  --accent-foreground: hsl(0, 0%, 96%);
   --destructive: hsl(0, 62%, 50%);
-  --destructive-foreground: hsl(52, 29%, 97%);
-  --ring: hsl(120, 23%, 70%);
+  --destructive-foreground: hsl(0, 0%, 96%);
+  --ring: hsl(154, 100%, 59%);
   --radius: 0.75rem;
 }
 
@@ -187,13 +190,13 @@
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--forest-green) 50%, var(--charcoal-green) 100%);
+    background: linear-gradient(135deg, var(--neon-mint) 0%, var(--electric-purple) 50%, var(--royal-gold) 100%);
     background-size: 300% 300%;
     animation: gentleShift 12s ease infinite;
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--primary) 100%);
+    background: linear-gradient(135deg, var(--neon-mint) 0%, var(--electric-purple) 100%);
     background-size: 200% 200%;
     animation: gentleShift 8s ease infinite;
     -webkit-background-clip: text;
@@ -213,9 +216,29 @@
   }
   
   .blur-effect {
-    backdrop-filter: blur(12px) saturate(180%);
-    background: var(--card);
-    border: 1px solid var(--border);
+    backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(28, 28, 40, 0.75);
+    border: 1px solid rgba(46, 46, 58, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .glassmorphism {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(28, 28, 40, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(50, 255, 196, 0.4), 0 0 40px rgba(50, 255, 196, 0.2), 0 0 60px rgba(50, 255, 196, 0.1);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(161, 98, 247, 0.4), 0 0 40px rgba(161, 98, 247, 0.2), 0 0 60px rgba(161, 98, 247, 0.1);
+  }
+  
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(255, 213, 107, 0.4), 0 0 40px rgba(255, 213, 107, 0.2), 0 0 60px rgba(255, 213, 107, 0.1);
   }
   
   /* Enhanced navbar backdrop */
@@ -275,7 +298,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+    background: linear-gradient(135deg, var(--neon-mint), var(--electric-purple));
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -286,7 +309,7 @@
   
   .skill-card:hover {
     transform: translateY(-8px) rotateX(2deg);
-    box-shadow: 0 25px 50px -12px rgba(157, 191, 158, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(50, 255, 196, 0.4), 0 0 20px rgba(161, 98, 247, 0.3);
     border-color: var(--primary);
   }
   
@@ -306,7 +329,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+    background: linear-gradient(135deg, var(--neon-mint), var(--electric-purple));
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -317,7 +340,7 @@
   
   .project-card:hover {
     border-color: var(--primary);
-    box-shadow: 0 25px 50px -12px rgba(157, 191, 158, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(50, 255, 196, 0.3), 0 0 25px rgba(161, 98, 247, 0.2);
     transform: translateY(-5px) scale(1.01);
   }
   
@@ -368,10 +391,10 @@
   }
   
   .parallax-bg {
-    background: radial-gradient(circle at 20% 50%, var(--sage-green) 0%, transparent 40%),
-                radial-gradient(circle at 80% 20%, var(--forest-green) 0%, transparent 40%),
-                radial-gradient(circle at 40% 80%, var(--primary) 0%, transparent 40%);
-    opacity: 0.15;
+    background: radial-gradient(circle at 20% 50%, var(--neon-mint) 0%, transparent 30%),
+                radial-gradient(circle at 80% 20%, var(--electric-purple) 0%, transparent 30%),
+                radial-gradient(circle at 40% 80%, var(--royal-gold) 0%, transparent 30%);
+    opacity: 0.08;
     animation: parallaxMove 20s ease-in-out infinite;
   }
 

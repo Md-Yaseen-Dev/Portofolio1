@@ -17,13 +17,13 @@ export default function HeroSection() {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-16 bg-background"
     >
-      {/* Dark nature-inspired background */}
+      {/* Futuristic background with glowing orbs */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-muted"></div>
       
-      {/* Subtle floating elements for dark theme */}
-      <div className="absolute w-64 h-64 top-10 left-10 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute w-96 h-96 bottom-20 right-10 bg-accent/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      {/* Glowing floating elements for futuristic theme */}
+      <div className="absolute w-64 h-64 top-10 left-10 bg-primary/20 rounded-full blur-xl animate-pulse glow-primary"></div>
+      <div className="absolute w-96 h-96 bottom-20 right-10 bg-accent/15 rounded-full blur-2xl animate-pulse glow-accent" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[hsl(45,100%,70%)]/10 rounded-full blur-2xl animate-pulse glow-gold" style={{ animationDelay: '4s' }}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
@@ -112,7 +112,7 @@ export default function HeroSection() {
               >
                 <Button 
                   onClick={handleContactClick}
-                  className="bg-transparent border-2 border-primary text-primary px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 whitespace-nowrap w-full"
+                  className="bg-transparent border-2 border-primary text-primary px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 whitespace-nowrap w-full hover:glow-primary"
                 >
                   CONTACT ME 📧
                 </Button>
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 className="flex-1"
               >
                 <Button 
-                  className="bg-primary hover:bg-[hsl(120,20%,45%)] text-primary-foreground px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap w-full"
+                  className="bg-primary hover:bg-[hsl(154,100%,55%)] text-primary-foreground px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap w-full glow-primary hover:glow-primary"
                 >
                   GET RESUME 📄
                 </Button>
@@ -139,7 +139,7 @@ export default function HeroSection() {
             className="relative order-2 lg:order-2 flex items-center justify-center lg:justify-end hero-right-column"
           >
             <div 
-              className="bg-card/90 rounded-2xl p-4 lg:p-6 text-left shadow-2xl backdrop-blur-sm overflow-hidden border border-border w-full max-w-lg mx-auto lg:mx-0"
+              className="glassmorphism rounded-2xl p-4 lg:p-6 text-left shadow-2xl overflow-hidden w-full max-w-lg mx-auto lg:mx-0"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               <div className="flex items-center mb-6">
