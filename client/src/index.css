@@ -60,16 +60,68 @@
     @apply border-border;
   }
 
-  body {
-    @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+  html {
+    overflow-y: hidden; /* Completely hide vertical scroll */
+    overflow-x: hidden; /* Hide horizontal scroll */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
   }
 
+  html::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; /* Prevent all scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+  }
+
   body::-webkit-scrollbar {
     display: none; /* WebKit */
+  }
+
+  /* Remove scrollbars from all elements */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+
+  /* Ensure no element creates vertical overflow */
+  #root {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  /* Hide scrollbars on all scrollable elements */
+  .overflow-y-auto::-webkit-scrollbar,
+  .overflow-x-auto::-webkit-scrollbar,
+  .overflow-auto::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overflow-y-auto,
+  .overflow-x-auto,
+  .overflow-auto {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Prevent any element from showing scrollbars */
+  div::-webkit-scrollbar,
+  section::-webkit-scrollbar,
+  main::-webkit-scrollbar,
+  article::-webkit-scrollbar {
+    display: none;
   }
 
   html {
