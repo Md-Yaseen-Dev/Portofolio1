@@ -3,7 +3,7 @@ import EnhancedScrollAnimation from "./enhanced-scroll-animation";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-secondary relative overflow-hidden">
+    <section id="about" className="py-20 bg-secondary relative overflow-hidden min-h-screen flex items-center">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="floating-orb w-72 h-72 top-10 right-10 opacity-5"></div>
@@ -48,7 +48,7 @@ export default function AboutSection() {
                 passionate about problem-solving.
               </motion.p>
               <motion.p 
-                className="text-lg text-slate-300 leading-relaxed"
+                className="text-lg text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
@@ -57,7 +57,7 @@ export default function AboutSection() {
                 make the web more open to the world. My core skill is based on <span className="gradient-text font-semibold">JavaScript</span> and I love to do most of the things using JavaScript.
               </motion.p>
               <motion.p 
-                className="text-lg text-slate-300 leading-relaxed"
+                className="text-lg text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
