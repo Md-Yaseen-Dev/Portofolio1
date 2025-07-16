@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import EnhancedScrollAnimation from "./enhanced-scroll-animation";
+import photo from '../../public/photo4.png';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-secondary relative overflow-hidden min-h-screen flex items-center">
+    <section id="about" className="py-20 bg-secondary relative">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="floating-orb w-72 h-72 top-10 right-10 opacity-5"></div>
@@ -11,10 +12,9 @@ export default function AboutSection() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <EnhancedScrollAnimation direction="up" delay={0.2}>
           <div className="text-center mb-16">
             <motion.h2 
-              className="text-5xl md:text-6xl font-bold mb-4 gradient-text"
+              className="text-5xl md:text-6xl font-bold mb-4 gradient-text "
               whileHover={{ scale: 1.05 }}
             >
               ABOUT ME
@@ -28,7 +28,6 @@ export default function AboutSection() {
               Who I am?
             </motion.p>
           </div>
-        </EnhancedScrollAnimation>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <EnhancedScrollAnimation direction="left" delay={0.3}>
@@ -74,14 +73,14 @@ export default function AboutSection() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <motion.div
-                className="relative inline-block"
+                className="w-full flex justify-center items-center"
                 whileHover={{ rotateY: 10 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&h=640" 
+                  src={photo}
                   alt="Shaik Mohammad Yaseen" 
-                  className="rounded-2xl shadow-2xl mx-auto w-80 h-80 object-cover border-4 border-primary/30 relative z-10"
+                  className="rounded-full shadow-2xl h-full object-cover relative z-10 overflow-hidden"
                 />
                 <motion.div
                   className="absolute inset-0 gradient-bg rounded-2xl opacity-20 blur-xl"

@@ -112,7 +112,7 @@ export default function HeroSection() {
               >
                 <Button 
                   onClick={handleContactClick}
-                  className="bg-transparent border-2 border-primary text-primary px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 whitespace-nowrap w-full hover:glow-primary"
+                  className="hover:bg-[hsl(154,100%,55%)] hover:text-[black] bg-transparent border-2 border-primary text-primary px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg  transition-all duration-300 whitespace-nowrap w-full hover:glow-primary"
                 >
                   CONTACT ME 📧
                 </Button>
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 className="flex-1"
               >
                 <Button 
-                  className="bg-primary hover:bg-[hsl(154,100%,55%)] text-primary-foreground px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap w-full glow-primary hover:glow-primary"
+                  className="bg-primary hover:bg-[hsl(154,100%,55%)] hover:text-[black] text-primary-foreground px-3 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 whitespace-nowrap w-full glow-primary hover:glow-primary"
                 >
                   GET RESUME 📄
                 </Button>

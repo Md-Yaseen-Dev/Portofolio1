@@ -16,7 +16,7 @@ export default function ContactSection() {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
@@ -28,12 +28,33 @@ export default function ContactSection() {
       return;
     }
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        toast({
+          title: "Message Sent!",
+          description: data.message || "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: data.message || "Failed to send message.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -183,9 +204,9 @@ export default function ContactSection() {
           <EnhancedScrollAnimation direction="right" delay={0.4}>
             <div className="space-y-8">
               {[
-                { icon: Mail, label: "Email", value: "yaseen.shaik@email.com" },
-                { icon: Phone, label: "Phone", value: "+91 9999895695" },
-                { icon: MapPin, label: "Location", value: "Hyderabad, India" }
+                { icon: Mail, label: "Email", value: "mohammadyaseen.dev@gmail.com" },
+                { icon: Phone, label: "Phone", value: "+91 7095959867" },
+                { icon: MapPin, label: "Location", value: "Anantapur, India" }
               ].map((contact, index) => (
                 <motion.div 
                   key={index}

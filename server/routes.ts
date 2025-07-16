@@ -14,14 +14,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // In a real application, you would:
-      // 1. Validate the email format
-      // 2. Sanitize the input
-      // 3. Send an email using a service like Nodemailer
-      // 4. Store the message in a database
-      
+      // Send email using Nodemailer
+      try {
+        await import('./mailer').then(({ sendContactEmail }) =>
+          sendContactEmail({ name, email, message })
+        );
+      } catch (mailErr) {
+        console.error('Failed to send email:', mailErr);
+        return res.status(500).json({ message: 'Failed to send email notification.' });
+      }
+
       console.log("Contact form submission:", { name, email, message });
-      
+
       res.json({ 
         message: "Message sent successfully! Thank you for reaching out." 
       });
